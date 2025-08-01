@@ -1,15 +1,16 @@
 {
-  "name": "efrainrp.github.io",
+  "name": "about_efrain",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://EfrainRP.github.io/EfrainRP.github.io",
   "type": "module",
+  "homepage": "https://EfrainRP.github.io/about_efrain",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "deploy": "npm run build && gh-pages -d dist"
+    "lint": "eslint . - ext js,jsx - report-unused-disable-directives - max-warnings 0",
+    "preview": "vite preview"
   },
   "dependencies": {
     "react": "^19.1.0",
