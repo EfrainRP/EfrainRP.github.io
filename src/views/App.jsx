@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import Header from './header.jsx'
-import reactLogo from './assets/react.svg'
+import Hero from './Hero.jsx'
+import About from './About.jsx'
+import reactLogo from '../assets/react.svg'
 import viteLogo from '/vite.svg'
 // import './App.css'
 
@@ -22,23 +24,14 @@ function App() {
   }, [lastScrollY]);
 
   return (
-    <div className="min-h-screen scroll-smooth">
+    <div className="scheme-light-dark scroll-smooth">
       {/* Header */}
       <Header/>
 
-      <main className="pt-10 p-4">
-        {/* Relleno para permitir scroll */}
-        {/* Sección About */}
-        <section id="about" className="h-screen bg-green-100 p-4 rounded mb-10 text-black">
-          <h2 className="text-2xl font-bold">About</h2>
-          <p>Contenido de la sección About...</p>
-        </section>
-
-        {/* Sección Contact */}
-        <section id="contact" className="h-screen bg-yellow-100 p-4 rounded mb-10 text-black">
-          <h2 className="text-2xl font-bold">Contact</h2>
-          <p>Contenido de la sección Contact...</p>
-        </section>
+      <main>
+        <Hero />
+        <About />
+        {/* Aquí podrías añadir más secciones: Projects, Contact, etc */}
       </main>
     </div>
   );
