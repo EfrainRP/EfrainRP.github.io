@@ -9,7 +9,12 @@ export default function About() {
                     className="w-48 h-48 rounded-full shadow-md"
                 />
                 <p className="text-white-800 text-lg leading-relaxed">
-                    Soy desarrollador web y de aplicaciones con pasión por crear soluciones digitales limpias y efectivas. Me especializo en React, Node.js y el diseño centrado en el usuario.
+                    I am a passionate and driven individual seeking
+                    opportunities that chalenge me to grow and expand
+                    my skils in programming and electronics.
+                    With a strong sense of organization, responsibility, and a
+                    colaborative mindset, I thrive in team environments
+                    and enjoy tackling new chalenges.
                 </p>
             </div>
         </section>

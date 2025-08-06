@@ -4,9 +4,11 @@ export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <header className="fixed w-full top-0 z-50 shadow-md bg-white dark:bg-gray-900 animate-fade-down">
+        <header className="fixed w-full top-0 z-50 shadow-md bg-white dark:bg-gray-900">
             <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-                <h1 className="text-xl font-bold text-blue-600 dark:text-white">Efrain Robles</h1>
+                {/* <h1 className="text-xl font-bold text-blue-600 dark:text-white">Developer Efrain</h1> */}
+                <h1 className="md:hidden text-xl font-bold text-blue-600 dark:text-white">Dev Efrain</h1>
+                <h1 className="hidden md:block text-xl font-bold text-blue-600 dark:text-white">Developer Efrain</h1>
 
                 {/* Botón hamburguesa para móvil */}
                 <button
