@@ -4,7 +4,7 @@ export default function About() {
             <h2 className="text-3xl font-bold text-center mb-8">About me</h2>
             <div className="flex flex-col md:flex-row items-center gap-8">
                 <img
-                    src="https://avatars.githubusercontent.com/u/1?v=4"
+                    src="efra.jpg"
                     alt="Foto"
                     className="w-48 h-48 rounded-full shadow-md"
                 />

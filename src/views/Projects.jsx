@@ -7,7 +7,6 @@ import Tecnology from '../component/Tencology.jsx';
 export default function Start() {
     return (
         <Layout>
-            
             <Tecnology/>
         </Layout>
     );
