@@ -10,7 +10,7 @@
   }
 
   .animate-fade-down {
-    animation: fadeDown 2.5s ease-out;
+    animation: fadeDown 1s ease-out;
   }
   @keyframes fadeDown {
     from {

@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
@@ -6,9 +8,10 @@ export default function Header() {
     return (
         <header className="fixed w-full top-0 z-50 shadow-md bg-white dark:bg-gray-900">
             <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-                {/* <h1 className="text-xl font-bold text-blue-600 dark:text-white">Developer Efrain</h1> */}
-                <h1 className="md:hidden text-xl font-bold text-blue-600 dark:text-white">Dev Efrain</h1>
-                <h1 className="hidden md:block text-xl font-bold text-blue-600 dark:text-white">Developer Efrain</h1>
+                <Link to="/">
+                    <h1 className="md:hidden text-xl font-bold text-blue-600 dark:text-white">Dev Efrain</h1>
+                    <h1 className="hidden md:block text-xl font-bold text-blue-600 dark:text-white">Developer Efrain</h1>
+                </Link>
 
                 {/* Botón hamburguesa para móvil */}
                 <button
@@ -35,15 +38,21 @@ export default function Header() {
                     className={`${isOpen ? 'block' : 'hidden'
                         } absolute top-full left-0 w-full bg-white dark:bg-gray-900 md:static md:flex md:w-auto md:space-x-6 md:block transition-all duration-300`}
                 >
-                    <a href="#about" className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition">
-                        Sobre mí
-                    </a>
-                    <a href="#projects" className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition">
-                        Proyectos
-                    </a>
-                    <a href="#contact" className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition">
+                    <Link to="/" className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition">
+                        Home
+                    </Link>
+                    <Link to="/projects" className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition">
+                        Projects
+                    </Link>
+                    <Link to="/experience" className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition">
+                        Experience
+                    </Link>
+                    <Link to="/education" className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition">
+                        Education
+                    </Link>
+                    <Link to="/contact" className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition">
                         Contacto
-                    </a>
+                    </Link>
                 </nav>
             </div>
         </header>

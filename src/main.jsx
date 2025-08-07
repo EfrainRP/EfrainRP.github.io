@@ -2,18 +2,24 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+import packageJSON from '../package.json';
+
 import './index.css'
 
-import Start from './view/Start.jsx';
+import Projects from './views/Projects.jsx';
+import AboutMe from './views/AboutMe.jsx';
+import NotFound from './views/NotFound.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
 
-    <BrowserRouter basename="/about_efrain">
+    <BrowserRouter basename={`/${packageJSON.name}/`}>
       <Routes>
-        <Route path="/" element={<Start />} />
-        {/* <Route path="/sobre-mi" element={<SobreMi />} />
-        <Route path="/proyectos" element={<Proyectos />} /> */}
+        <Route path="/" element={<AboutMe />} />
+        <Route path="/projects" element={<Projects />} />
+        {/* <Route path="/proyectos" element={<Proyectos />} /> */}
+
+        <Route path="*" element={<NotFound />} /> {/* ✅ Ruta comodín */}
       </Routes>
     </BrowserRouter>
     
