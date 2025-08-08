@@ -2,12 +2,12 @@
 export default function Hero() {
 
     return (
-        <section className="pt-32 pb-20 bg-gradient-to-b from-blue-50 to-white animate-fade-in">
+        <section className="pt-35 pb-30 bg-gradient-to-b from-blue-50 to-white animate-fade-in">
             <div className="flex flex-col md:flex-row items-center text-center md:text-left max-w-4xl mx-auto gap-0 md:gap-">
                 <img
-                    src="efra.jpg"
+                    src="myPhotos/formal.jpg"
                     alt="Avatar"
-                    className="w-70 h-70 mx-auto rounded-full shadow-lg mb-6 md:mb-0 "
+                    className="w-62 h-62 mx-auto rounded-full shadow-lg mb-6 md:mb-0 "
                 />
                 <div>
                     <h1 className="mt-6 text-6xl font-extrabold text-blue-700">Efrain Robles</h1>
