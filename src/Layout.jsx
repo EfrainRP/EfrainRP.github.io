@@ -1,6 +1,4 @@
 // import { useState, useEffect } from 'react'
-import Hero from './component/Hero.jsx'
-import About from './component/About.jsx'
 import Header from './component/Header.jsx';
 // import './App.css'
 
