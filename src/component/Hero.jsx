@@ -1,23 +1,23 @@
 
-export default function Hero() {
+export default function Hero({py='pt-30 pb-35', wPhoto='w-62 h-62', textTitle='6'}) {
 
     return (
-        <section className="pt-35 pb-30 bg-gradient-to-b from-blue-50 to-white animate-fade-in">
-            <div className="flex flex-col md:flex-row items-center text-center md:text-left max-w-4xl mx-auto gap-0 md:gap-">
+        <section className={`${py} bg-gradient-to-b from-blue-50 to-white animate-fade-in`}>
+            <div className="flex flex-col md:flex-row justify-center items-center text-center md:text-left max-w-4xl mx-auto gap-0 md:gap-8">
                 <img
                     src="myPhotos/formal.jpg"
                     alt="Avatar"
-                    className="w-62 h-62 mx-auto rounded-full shadow-lg mb-6 md:mb-0 "
+                    className={`${wPhoto} rounded-full shadow-lg mb-6 md:mb-0`}
                 />
                 <div>
-                    <h1 className="mt-6 text-6xl font-extrabold text-blue-700">Efrain Robles</h1>
-                    <h2 className="mt-2 text-lg font-bold text-gray-800">
+                    <h1 className={`mt-6 text-${textTitle}xl font-extrabold text-blue-700`}>Efrain Robles</h1>
+                    <h2 className="mt-2 font-bold text-gray-800">
                         Computer Engineer | FullStack Developer | Dinosaur Fan 🦖 
                     </h2>
                     <p className="mt-2 text-lg text-gray-700">
                         Looking challenges to improve my logical and programming skills.
                     </p>
-                    <div className="text-center flex space-x-4">
+                    <div className="text-center flex space-x-4 justify-center md:justify-start">
                         <a
                             href="https://www.linkedin.com/in/efrain-robles-pulido"
                             target="_blank"
@@ -40,7 +40,7 @@ export default function Hero() {
                         </a>
                         <a 
                             // href="assets/EfrainRP"
-                            className="mt-3 p-2 inline-block text-white rounded bg-gray-500 hover:bg-gray-400 transition"
+                            className="mt-6 p-2 inline-blocktext-white rounded bg-gray-500 hover:bg-gray-400 transition"
                             href="C.V._Efrain_Robles.pdf"
                             download
                         >
