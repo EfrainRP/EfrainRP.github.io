@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-export default function AccordionItem ({ title, children }) {
+export default function AccordionItem ({ title, children, className, classNameChildren = "flex flex-col md:flex-row space-x-6 md:space-x-6 md:space-y-0 space-y-4 justify-between items-center py-2 text-gray-600"}) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border-b border-gray-200">
+    <div className={`border-b border-gray-200 ${className}`}>
       <button
         className="w-full flex justify-between items-center py-2 text-left text-gray-800 font-semibold hover:text-blue-600 transition"
         onClick={() => setIsOpen(!isOpen)}
@@ -23,7 +23,7 @@ export default function AccordionItem ({ title, children }) {
       </button>
 
       {isOpen && (
-        <div className="flex flex-col md:flex-row space-x-6 md:space-x-6 md:space-y-0 space-y-4 justify-between items-center py-2 text-gray-600">
+        <div className={`${classNameChildren} p-4 bg-gray-50 rounded-b-lg`}>
           {children}
         </div>
 

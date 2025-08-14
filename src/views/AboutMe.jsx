@@ -16,7 +16,7 @@ export default function AboutMe() {
                         I am eager to apply my knowledge in real-world projects and contribute to the field of software development, which allows me to improve my skills and grow my knowledge.<br/>
                     </p>
                     <img
-                        src="myPhotos/informal2.jpg"
+                        src="myPhotos/informal.jpg"
                         className="h-auto w-45 rounded-lg shadow-xl dark:shadow-gray-800"
                     />
                 </div>
