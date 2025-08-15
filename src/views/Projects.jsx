@@ -6,6 +6,10 @@ import Layout from '../Layout.jsx';
 import Hero from '../component/Hero.jsx';
 import Carousel from '../component/Carousel.jsx';
 
+import front from "../assets/front.json";
+import back from "../assets/back.json";
+import devOps from "../assets/devOps.json";
+import language from "../assets/language.json";
 
 export default function Start() {
     return (
