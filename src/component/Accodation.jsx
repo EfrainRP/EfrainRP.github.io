@@ -1,7 +1,18 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function AccordionItem ({ title, children, className, classNameChildren = "flex flex-col md:flex-row space-x-6 md:space-x-6 md:space-y-0 space-y-4 justify-between items-center py-2 text-gray-600"}) {
   const [isOpen, setIsOpen] = useState(false);
+
+  const [height, setHeight] = useState(0);
+  const contentRef = useRef(null);
+
+  useEffect(() => {
+    if (isOpen) {
+      setHeight(contentRef.current.scrollHeight); // altura real del contenido
+    } else {
+      setHeight(0);
+    }
+  }, [isOpen]);
 
   return (
     <div className={`border-b border-gray-200 ${className}`}>
@@ -9,7 +20,7 @@ export default function AccordionItem ({ title, children, className, classNameCh
         className="w-full flex justify-between items-center py-2 text-left text-gray-800 font-semibold hover:text-blue-600 transition"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span>{title}</span>
+        <span className='text-gray-700'>{title}</span>
         <svg
           className={`w-5 h-5 transform transition-transform duration-300 ${
             isOpen ? "rotate-180" : ""
@@ -22,12 +33,15 @@ export default function AccordionItem ({ title, children, className, classNameCh
         </svg>
       </button>
 
-      {isOpen && (
+      <div
+        ref={contentRef}
+        style={{ maxHeight: `${height}px` }}
+        className="transition-all duration-600 ease-in-out overflow-hidden"
+      >
         <div className={`${classNameChildren} p-4 bg-gray-50 rounded-b-lg`}>
           {children}
         </div>
-
-      )}
+      </div>
     </div>
   );
 }

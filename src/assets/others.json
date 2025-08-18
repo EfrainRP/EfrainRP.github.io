@@ -1,0 +1,15 @@
+[
+    {
+        "name": "OpenCV",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/opencv/opencv-original.svg"
+    },
+    {
+        "name": "Axios",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/axios/axios-plain.svg"
+    },
+    {
+        "name": "Express",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original-wordmark.svg"
+    }
+    
+]

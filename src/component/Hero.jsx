@@ -1,8 +1,8 @@
 
-export default function Hero({py='pt-30 pb-35', wPhoto='w-62 h-62', textTitle='6'}) {
+export default function Hero({py='pt-30 pb-35', animate='animate-fade-down', wPhoto='w-62 h-62', textTitle='6'}) {
 
     return (
-        <section className={`${py} bg-gradient-to-b from-blue-50 to-white animate-fade-in`}>
+        <section className={`${py} bg-gradient-to-b from-blue-50 to-white ${animate}`}>
             <div className="flex flex-col md:flex-row justify-center items-center text-center md:text-left max-w-4xl mx-auto gap-0 md:gap-8">
                 <img
                     src="myPhotos/formal.jpg"
