@@ -11,6 +11,19 @@ import back from "../assets/back.json";
 import devOps from "../assets/devOps.json";
 import language from "../assets/language.json";
 
+const images = [
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+];
+
 export default function Start() {
     return (
         <Layout>
@@ -46,7 +59,7 @@ export default function Start() {
                                         </Accordion>
                                     </div>
                                 </div>
-                                <Carousel/>
+                                    <Carousel images={images}/>
                                 <div className='flex space-x-4 justify-center'>
                                     <a
                                         href="https://github.com/EfrainRP/AiSportFrontend.git"

@@ -1,109 +1,94 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 
-const images = [
-  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-  "https://picsum.photos/id/1016/300/200",
-  "https://picsum.photos/id/1018/300/200",
-  "https://picsum.photos/id/1020/300/200",
-  "https://picsum.photos/id/1024/300/200",
-  "https://picsum.photos/id/1035/300/200",
-  "https://picsum.photos/id/1038/300/200",
-  "https://picsum.photos/id/1040/300/200",
-  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-];
-
-// import {
-//   BsFillArrowRightCircleFill,
-//   BsFillArrowLeftCircleFill,
-// } from "react-icons/bs";
-
-export default function Carousel() {
+export default function Carousel({ images }) {
   const slidesPerView = 5;
   const totalSlides = images.length;
-  const [current, setCurrent] = useState(0);
-  const containerRef = useRef();
 
-  // Movimiento automático cada 3 segundos
+  // // Clonamos los primeros y últimos slides
+  // const extendedImages = [
+  //   ...images.slice(-slidesPerView), // clones al inicio
+  //   ...images,
+  //   ...images.slice(0, slidesPerView), // clones al final
+  // ];
+
+  // Arrancamos en el índice real (después de los clones iniciales)
+  const [current, setCurrent] = useState(slidesPerView);
+  const [isTransitioning, setIsTransitioning] = useState(true);
+
+  // Auto slide
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
     }, 3000);
     return () => clearInterval(interval);
-  }, [current]);
-
-  const previousSlide = () => {
-    setCurrent((prev) => (prev - 1 + totalSlides) % totalSlides);
-  };
+  }, []);
 
   const nextSlide = () => {
-    setCurrent((prev) => (prev + 1) % totalSlides);
+    setCurrent((prev) => prev + slidesPerView);
   };
 
-  // Generamos un array circular para el desplazamiento continuo
-  const getVisibleSlides = () => {
-    let visible = [];
-    for (let i = 0; i < totalSlides + slidesPerView; i++) {
-      visible.push(images[(current + i) % totalSlides]);
+  const previousSlide = () => {
+    setCurrent((prev) => prev - slidesPerView);
+  };
+
+  // Reset cuando caemos en un clon
+  useEffect(() => {
+    if (current >= totalSlides + slidesPerView) {
+      // Pasamos el final (clones)
+      setTimeout(() => {
+        setIsTransitioning(false);
+        setCurrent(slidesPerView); // volver al real inicio
+      }, 700);
+    } else if (current < slidesPerView) {
+      // Pasamos el inicio (clones)
+      setTimeout(() => {
+        setIsTransitioning(false);
+        setCurrent(totalSlides); // ir al real final
+      }, 700);
+    } else {
+      setIsTransitioning(true);
     }
-    return visible;
-  };
-
-  const slideWidth = 50 / slidesPerView;
+  }, [current, totalSlides, slidesPerView]);
 
   return (
-    <div className="overflow-hidden relative w-full">
+    <div className="relative w-full overflow-hidden">
+      {/* Track */}
       <div
-        ref={containerRef}
-        className="flex transition-transform duration-500 ease-out"
+        className={`flex ${
+          isTransitioning ? "transition-transform duration-700 ease-in-out" : ""
+        }`}
         style={{
-          transform: `translateX(-${current * slideWidth}%)`,
-          width: `${(images.length + slidesPerView) * slideWidth}%`,
+          transform: `translateX(-${(current * 100) / slidesPerView}%)`,
+          // width: `${(extendedImages.length * 100) / slidesPerView}%`,
         }}
       >
-        {getVisibleSlides().map((img, index) => (
+        {images.map((img, index) => (
           <div
             key={index}
-            className="flex-shrink-0 p-2"
-            style={{ width: `${slideWidth}%` }}
+            className="w-1/5 flex-shrink-0 flex justify-center items-center p-2"
           >
             <img
               src={img}
               alt={`slide-${index}`}
-              className="w-full h-48 object-cover rounded-lg"
+              className="w-16 h-16 rounded-full object-cover"
             />
           </div>
         ))}
       </div>
 
       {/* Botones */}
-      <div className="absolute top-0 h-full w-full flex justify-between items-center px-4">
-        <button
-          onClick={previousSlide}
-          className="bg-black/50 text-white rounded-full p-2 hover:bg-black/70"
-        >
-          &#10094;
-        </button>
-        <button
-          onClick={nextSlide}
-          className="bg-black/50 text-white rounded-full p-2 hover:bg-black/70"
-        >
-          &#10095;
-        </button>
-      </div>
-
-      {/* Indicadores */}
-      <div className="absolute bottom-2 w-full flex justify-center gap-2">
-        {images.map((_, i) => (
-          <div
-            key={i}
-            onClick={() => setCurrent(i)}
-            className={`rounded-full w-3 h-3 cursor-pointer ${
-              i === current ? "bg-white" : "bg-gray-500"
-            }`}
-          ></div>
-        ))}
-      </div>
+      <button
+        onClick={previousSlide}
+        className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full hover:bg-black/60"
+      >
+        ◀
+      </button>
+      <button
+        onClick={nextSlide}
+        className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full hover:bg-black/60"
+      >
+        ▶
+      </button>
     </div>
   );
 }
