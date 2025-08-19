@@ -39,7 +39,7 @@ export default function Header() {
                     className={`${isOpen ? 'block' : 'hidden'
                         } absolute top-full left-0 w-full bg-white dark:bg-gray-900 md:static md:flex md:w-auto md:space-x-6 md:block transition-all duration-300`}
                 >
-                    <Link to="/" className={`block px4 py-2 hover:text-blue-600 dark:hover:text-blue-400 transition ${pathname === '/' ? 'text-blue-600 dark:text-blue-400' : 'text-gray-700 dark:text-gray-200'}`}>
+                    <Link to="/" className={`block px-4 py-2 hover:text-blue-600 dark:hover:text-blue-400 transition ${pathname === '/' ? 'text-blue-600 dark:text-blue-400' : 'text-gray-700 dark:text-gray-200'}`}>
                         Home
                     </Link>
                     <Link to="/projects" className={`block px-4 py-2 hover:text-blue-600 dark:hover:text-blue-400 transition ${pathname === '/projects' ? 'text-blue-600 dark:text-blue-400' : 'text-gray-700 dark:text-gray-200'}`}>

@@ -22,8 +22,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/projects" errorElement={<NotFound/>} element={<Projects />} />
         <Route path="/experience" errorElement={<NotFound/>} element={<Experience />} />
         <Route path="/education" errorElement={<NotFound/>} element={<Education />} />
-        {/* <Route path="/contact" errorElement={<NotFound/>} element={<Contact />} /> */}
-        {/* <Route path="/proyectos" element={<Proyectos />} /> */}
+        <Route path="/contact" errorElement={<NotFound/>} element={<Contact />} />
 
         <Route path="*" element={<NotFound />} /> {/* ✅ Ruta comodín */}
       </Routes>

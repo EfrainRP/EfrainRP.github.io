@@ -5,9 +5,13 @@ import Layout from "../Layout.jsx";
 import Hero from "../component/Hero.jsx";
 import emailjs from "@emailjs/browser";
 
-
 export default function Contact() {
-    const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
+    const [form, setForm] = useState({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+    });
     const [loading, setLoading] = useState(false);
     const [status, setStatus] = useState(null);
 
@@ -27,27 +31,28 @@ export default function Contact() {
             //     body: JSON.stringify(form),
             // });
 
-            emailjs.send(
-                "service_jfl9ntn",
-                "template_tnpj2pp",
-                {
-                    name: form.name,
-        email: form.email,
-        subject: form.subject,
-        message: form.message,
-                },      
-                "UMVvk2CdcO-VUUYU2"
-    )
-    .then((res) => {
-      alert("Mensaje enviado ✅");
-      setStatus("success");
-      e.target.reset();
-    })
-    .catch((err) => {
-      alert("Error ❌");
-      console.error(err);
-      setStatus("error");
-    });
+            emailjs
+                .send(
+                    "service_jfl9ntn",
+                    "template_tnpj2pp",
+                    {
+                        name: form.name,
+                        email: form.email,
+                        subject: form.subject,
+                        message: form.message,
+                    },
+                    "UMVvk2CdcO-VUUYU2"
+                )
+                .then((res) => {
+                    alert("Mensaje enviado ✅");
+                    setStatus("success");
+                    e.target.reset();
+                })
+                .catch((err) => {
+                    alert("Error ❌");
+                    console.error(err);
+                    setStatus("error");
+                });
 
             // if (res.ok) {
             //     setStatus("success");
@@ -64,9 +69,11 @@ export default function Contact() {
     };
 
     return (
-        <Layout className='animate-fade-in'>
+        <Layout className="animate-fade-in">
             <div className="max-w-3xl mx-auto mt-15 px-6 py-10 text-gray-800">
-                <h2 className="text-2xl text-gray-100 font-bold mb-6">Envíanos un mensaje</h2>
+                <h2 className="text-2xl text-gray-100 font-bold mb-6">
+                    Envíanos un mensaje
+                </h2>
 
                 <form
                     onSubmit={handleSubmit}
@@ -117,13 +124,15 @@ export default function Contact() {
                         disabled={loading}
                         className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition inline-flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                        {loading ? 
-                            <>  <div className="h-6 w-6 mr-2 rounded-full border-4 border-gray-300 border-t-blue-400 animate-spin"></div>
-
-                            Sending...</>
-                            : 
+                        {loading ? (
+                            <>
+                                {" "}
+                                <div className="h-6 w-6 mr-2 rounded-full border-4 border-gray-300 border-t-blue-400 animate-spin"></div>
+                                Sending...
+                            </>
+                        ) : (
                             "Send Message"
-                        }
+                        )}
                     </button>
 
                     {status === "success" && (
@@ -134,7 +143,7 @@ export default function Contact() {
                     )}
                 </form>
             </div>
-            <Hero py={'py-10 md:pt-8 md:pb-15'} wPhoto={'w-30'} textTitle='3' />
+            <Hero py={"py-10 md:pt-8 md:pb-15"} wPhoto={"w-30"} textTitle="3" />
         </Layout>
     );
 }
