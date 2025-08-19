@@ -2,7 +2,7 @@
 import Header from './component/Header.jsx';
 // import './App.css'
 
-export default function Layout({ children }) {
+export default function Layout({ children, className }) {
   // const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   // const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -20,13 +20,19 @@ export default function Layout({ children }) {
   // }, [lastScrollY]);
 
   return (
-    <div className="scheme-light-dark scroll-smooth">
+    <div className="flex flex-col min-h-screen scheme-light-dark scroll-smooth">
       {/* Header */}
       <Header/>
 
-      <main>
+      <main className={`flex-grow ${className}`}>
         {children}{/* Aquí podrías añadir más secciones: Projects, Contact, etc */}
       </main>
+      
+
+      <footer className="bg-gray-800 text-white p-4 text-center">
+        <p>Made by Efrain Robles.🦕</p>
+        <p>Made with 🧠 & 🔨 in React & Tailwind.</p>
+      </footer>
     </div>
   );
 }

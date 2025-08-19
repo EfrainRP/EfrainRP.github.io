@@ -2,12 +2,11 @@ import Layout from "../Layout.jsx";
 
 export default function Education() {
 return (
-    <Layout>
-    <section className="py-16 bg-gradient-to-b from-gray-50 to-white text-gray-800 mt-12">
-        <div className="max-w-4xl mx-auto px-6">
-            <h2 className="text-3xl font-bold text-center mb-12">Education</h2>
+    <Layout className="bg-gradient-to-b from-gray-50 to-white text-gray-800">
+        {/* <div className="max-w-4xl mx-auto px-6 py-16 bg-gradient-to-b from-gray-50 to-white text-gray-800 mt-12"> */}
+            <h2 className="text-3xl font-bold text-center mt-25 mb-10">Education</h2>
 
-            <div className="space-y-8">
+            <div className="max-w-4xl space-y-8 px-6 mx-auto">
                 {/* CUCEI */}
                 <div className="bg-white shadow-md rounded-xl p-6 flex items-center gap-6 hover:shadow-lg transition">
                     <img
@@ -23,7 +22,9 @@ return (
                         <p className="text-sm text-gray-500">
                             2020 – 2025
                         </p>
-                        <p className="text-gray-400 mt-4">
+                        <span className="text-gray-400">GPA 9.9</span>
+
+                        <p className="text-gray-400 text-justify mt-4">
                             I am learning about computer systems, programming, and software development. My studies have provided me with a solid foundation in computer science principles and practical skills in various programming languages and technologies.
                         </p>
                     </div>
@@ -47,14 +48,15 @@ return (
                         <p className="text-sm text-gray-500">
                         2017 – 2020
                         </p>
-                        <p className="text-gray-400 mt-4">
+                        <span className="text-gray-400">GPA 9.6</span>
+
+                        <p className="text-gray-400 text-justify mt-4">
                             I completed my high school education with a focus on electronics and programming skills. During my time there, I developed automatitation projects, which I found fascinating and inspiring, leading me to pursue a career in computer engineering.
                         </p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        {/* </div> */}
 
     {/* <section id="about" className="max-w-6xl mx-auto py-15 px-4 animate-fade-in ">
                 <h2 className="text-3xl font-bold text-center mb-8">Education</h2>

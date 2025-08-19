@@ -10,6 +10,7 @@ import Projects from './views/Projects.jsx';
 import AboutMe from './views/AboutMe.jsx';
 import Experience from './views/Experience.jsx';
 import Education from './views/Education.jsx';
+import Contact from './views/Contact.jsx';
 import NotFound from './views/NotFound.jsx';
 
 createRoot(document.getElementById('root')).render(
@@ -21,6 +22,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/projects" element={<Projects />} />
         <Route path="/experience" element={<Experience />} />
         <Route path="/education" element={<Education />} />
+        <Route path="/contact" element={<Contact />} />
         {/* <Route path="/proyectos" element={<Proyectos />} /> */}
 
         <Route path="*" element={<NotFound />} /> {/* ✅ Ruta comodín */}

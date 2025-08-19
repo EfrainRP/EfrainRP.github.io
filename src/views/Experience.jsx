@@ -36,7 +36,7 @@ const experiencia = [
 
 export default function Experience() {
     return (
-        <Layout>
+        <Layout className='bg-gradient-to-b from-gray-50 to-white text-gray-800'>
             {/* <br /><br /><br />
             <section id="about" className="max-w-6xl mx-auto py-15 px-4 animate-fade-in ">
                 <h2 className="text-3xl font-bold text-center mb-8">Experience</h2>
@@ -63,8 +63,8 @@ export default function Experience() {
                 </div>
             </section> */}
             
-            <section className="mt-5 py-20 bg-gradient-to-b from-gray-50 to-white text-gray-800">
-                <div className="max-w-4xl mx-auto px-6">
+            {/* <section className="mt-5 py-20 h-full bg-gradient-to-b from-gray-300 to-white text-gray-800"> */}
+                <div className="max-w-4xl mx-auto px-6 mt-25">
                     <h2 className="text-3xl font-bold text-center mb-12">
                         Work Experience
                     </h2>
@@ -148,7 +148,6 @@ export default function Experience() {
                     </motion.div> */}
 
                 </div>
-            </section>
         </Layout>
     );
 }

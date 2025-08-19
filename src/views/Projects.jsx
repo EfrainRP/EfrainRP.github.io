@@ -6,8 +6,6 @@ import Layout from '../Layout.jsx';
 import Hero from '../component/Hero.jsx';
 import Carousel from '../component/Carousel.jsx';
 
-
-
 export default function Start() {
     
     return (
@@ -36,7 +34,7 @@ export default function Start() {
                                         <p className="text-sm text-gray-500 text-justify leading-relaxed">
                                             Developed a full-stack basketball tournament management platform with AI-powered performance analysis. Implemented interactive match brackets, real-time updates, and camera-based MLP-CNN player tracking for key metrics. Built a dynamic, user-friendly frontend in React.js, a secure and scalable Node.js/Express API backend, and integrated MySQL with Socket.IO for real-time synchronization. Delivered a seamless solution that streamlined tournament operations and elevated player performance analytics.
                                         </p> 
-                                        <img className="w-85 md:w-55 rounded-2xl shadow-xl/35 shadow-black-500/55 hover:scale-[1.1] transition-transform duration-300" src="myPhotos/modularAiSport.JPG"/>
+                                        <img className="w-85 md:w-55 rounded-2xl shadow-xl/18 shadow-black-500/55 hover:scale-[1.1] transition-transform duration-300" src="myPhotos/modularAiSport.JPG"/>
                                     </Accordion>
                                 </div>
 
@@ -110,8 +108,8 @@ export default function Start() {
                                             Built a Python application using OpenCV to process map images, detect obstacles, and determine the most efficient paths between predefined vertices. Implemented graph construction of viable routes and applied Prim’s Algorithm to identify optimal connections while avoiding obstructions. Combined image processing, graph theory, and optimization techniques to deliver precise and efficient route planning.
                                         </p>  
                                         <div className="flex items-center gap-4 flex-col md:flex-row justify-center mb-4">
-                                            <img className="w-85 md:w-55 rounded-2xl shadow-xl/50 shadow-black-500/55 hover:scale-[1.3] transition-transform duration-300" src="myPhotos/Prim.png"/>
-                                            <img className="w-85 md:w-55 rounded-2xl shadow-xl/50 shadow-green-500/55 hover:scale-[1.3] transition-transform duration-300" src="myPhotos/Prim2.png"/>
+                                            <img className="w-85 md:w-55 rounded-2xl shadow-xl/32 shadow-black-500/55 hover:scale-[1.3] transition-transform duration-300" src="myPhotos/Prim.png"/>
+                                            <img className="w-85 md:w-55 rounded-2xl shadow-xl/32 shadow-green-500/55 hover:scale-[1.3] transition-transform duration-300" src="myPhotos/Prim2.png"/>
                                         </div>
                                     </Accordion>
                                 </div>
@@ -135,7 +133,7 @@ export default function Start() {
                     </div>
                 </div>
             </section>
-            <Hero py={'py-10 md:pt-10 md:pb-22'} wPhoto={'w-30'} textTitle='3'/>
+            <Hero py={'py-10 md:pt-8 md:pb-15'} wPhoto={'w-30'} textTitle='3' />
         </Layout>
     );
 }
