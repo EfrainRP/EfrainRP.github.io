@@ -24,7 +24,7 @@ export default function Carousel({ images }) {
 
   dataImages = dataImages.filter((item) => images.includes(item.name));
 
-  const slidesPerView = 6;
+  const slidesPerView = window.innerWidth < 768 ? 4 : 6; // 1 slide on mobile, 5 on desktop
   const totalSlides = dataImages.length;
   const totalPages = Math.ceil(totalSlides / slidesPerView);
 
@@ -67,7 +67,6 @@ export default function Carousel({ images }) {
     isDragging.current = false;
   };
 
-  console.log(totalSlides / slidesPerView);
   return (
     <div
       className="relative w-full overflow-hidden"
@@ -76,7 +75,7 @@ export default function Carousel({ images }) {
     >
       {/* Track */}
       <div
-        className="flex transition-transform duration-700 ease-in-out w-112 md:w-full"
+        className="flex transition-transform duration-700 ease-in-out"
         style={{
           transform: `translateX(-${currentPage * 100}%)`,
           // width: `${totalPages * 100}%`,
@@ -96,7 +95,7 @@ export default function Carousel({ images }) {
               .map((img, idx) => (
                 <div
                   key={idx}
-                  className={`w-1/5 flex flex-col justify-center items-center p-2`}
+                  className={`w-1/${slidesPerView} flex flex-col justify-center items-center p-2`}
                 >
                   <img
                     src={img.icon}

@@ -64,7 +64,7 @@ export default function Experience() {
             </section> */}
             
             {/* <section className="mt-5 py-20 h-full bg-gradient-to-b from-gray-300 to-white text-gray-800"> */}
-                <div className="max-w-4xl mx-auto px-6 mt-25">
+                <div className="max-w-4xl mx-auto px-6 mt-25 animate-fade-in">
                     <h2 className="text-3xl font-bold text-center mb-12">
                         Work Experience
                     </h2>
@@ -73,8 +73,8 @@ export default function Experience() {
                         {experiencia.map((item, index) => (
                             <motion.div
                                 key={index}
-                                className="mb-12 ml-6 relative"
-                                initial={{ opacity: 0, x: -50 }}
+                                className="mb-12 ml-6 relative shadow-lg hover:shadow-2xl transition-shadow duration-300"
+                                initial={{ opacity: 0, y: -50 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.6, delay: index * 0.15 }}
                                 viewport={{ once: true }}

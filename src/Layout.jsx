@@ -29,7 +29,7 @@ export default function Layout({ children, className }) {
       </main>
       
 
-      <footer className="bg-gray-800 text-white p-4 text-center">
+      <footer className="bg-gray-800 text-white p-4 text-center animate-fade-in">
         <p>Made by Efrain Robles.🦕</p>
         <p>Made with 🧠 & 🔨 in React & Tailwind.</p>
       </footer>
