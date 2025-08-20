@@ -143,7 +143,7 @@ export default function Contact() {
                     )}
                 </form>
             </div>
-            <Hero py={"py-10 md:pt-8 md:pb-15"} wPhoto={"w-30"} textTitle="3" />
+            <Hero py={'py-10 md:pt-1 md:pb-5'} wPhoto={"w-30"} textTitle="3" />
         </Layout>
     );
 }

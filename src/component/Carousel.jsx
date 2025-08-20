@@ -31,12 +31,12 @@ export default function Carousel({ images }) {
   const [currentPage, setCurrentPage] = useState(0);
 
   // autoplay
-  useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [currentPage]);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     nextSlide();
+  //   }, 5000);
+  //   return () => clearInterval(interval);
+  // }, [currentPage]);
 
   const nextSlide = () => {
     setCurrentPage((prev) => (prev + 1) % totalPages);
@@ -75,7 +75,7 @@ export default function Carousel({ images }) {
     >
       {/* Track */}
       <div
-        className="flex transition-transform duration-700 ease-in-out"
+        className="flex transition-transform duration-700 ease-in-out md:w-full"
         style={{
           transform: `translateX(-${currentPage * 100}%)`,
           // width: `${totalPages * 100}%`,
@@ -85,7 +85,7 @@ export default function Carousel({ images }) {
         {Array.from({ length: totalPages }).map((_, pageIndex) => (
           <div
             key={pageIndex}
-            className={`flex w-full flex-shrink-0 ${totalPages>1? '': 'justify-around'} items-center`}
+            className="flex w-full flex-shrink-0 justify-around items-center"
           >
             {dataImages
               .slice(
@@ -95,7 +95,7 @@ export default function Carousel({ images }) {
               .map((img, idx) => (
                 <div
                   key={idx}
-                  className={`w-1/${slidesPerView} flex flex-col justify-center items-center p-2`}
+                  className={`w-1/${slidesPerView} mx:auto flex flex-col justify-center items-center p-2`}
                 >
                   <img
                     src={img.icon}
