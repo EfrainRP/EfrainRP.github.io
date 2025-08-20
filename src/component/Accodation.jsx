@@ -1,6 +1,12 @@
 import { useState, useEffect, useRef } from "react";
 
-export default function AccordionItem ({ title, children, className, classNameChildren = "flex flex-col md:flex-row space-x-6 md:space-x-6 md:space-y-0 space-y-4 justify-between items-center py-2 text-gray-600"}) {
+export default function AccordionItem ({ 
+  title, 
+  className, 
+  bg_button = 'bg-blue-100 hover:bg-gray-300',
+  children, 
+  classNameChildren = "flex flex-col md:flex-row gap-4  justify-between items-center py-2 text-gray-600 bg-white" // md:space-y-0 space-y-4
+}) {
   const [isOpen, setIsOpen] = useState(false);
 
   const [height, setHeight] = useState(0);
@@ -15,14 +21,14 @@ export default function AccordionItem ({ title, children, className, classNameCh
   }, [isOpen]);
 
   return (
-    <div className={`border-b border-gray-200 ${className}`}>
+    <div className={className}>
       <button
-        className="w-full flex justify-between items-center py-2 text-left text-gray-800 font-semibold hover:text-blue-600 transition"
+        className={`w-full flex justify-between items-center my-1 p-2 text-left text-gray-700 hover:text-blue-600 font-semibold transition rounded-lg ${bg_button}`} 
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className='text-gray-700'>{title}</span>
+        <span>{title}</span>
         <svg
-          className={`w-5 h-5 transform transition-transform duration-300 ${
+          className={`w-5 h-5 mr-2 transform transition-transform duration-300 ${
             isOpen ? "rotate-180" : ""
           }`}
           fill="none"
@@ -38,7 +44,7 @@ export default function AccordionItem ({ title, children, className, classNameCh
         style={{ maxHeight: `${height}px` }}
         className="transition-all duration-600 ease-in-out overflow-hidden"
       >
-        <div className={`${classNameChildren} p-4 bg-gray-50 rounded-b-lg`}>
+        <div className={`${classNameChildren} p-4 mb-2 mx-4 rounded-2xl`}>
           {children}
         </div>
       </div>

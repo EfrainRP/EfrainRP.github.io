@@ -6,7 +6,7 @@ import devOps from "../assets/devOps.json";
 import language from "../assets/language.json";
 import others from "../assets/others.json";
 
-export default function Carousel({ images }) {
+export default function Carousel({ images , className, children}) {
   // const dataImages = [
   //   ...front.filter((item) => images.includes(item.name)),
   //   ...back.filter((item) => images.includes(item.name)),
@@ -31,12 +31,12 @@ export default function Carousel({ images }) {
   const [currentPage, setCurrentPage] = useState(0);
 
   // autoplay
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     nextSlide();
-  //   }, 5000);
-  //   return () => clearInterval(interval);
-  // }, [currentPage]);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [currentPage]);
 
   const nextSlide = () => {
     setCurrentPage((prev) => (prev + 1) % totalPages);
@@ -73,6 +73,7 @@ export default function Carousel({ images }) {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
+      {children}
       {/* Track */}
       <div
         className="flex transition-transform duration-700 ease-in-out md:w-full"
@@ -85,7 +86,7 @@ export default function Carousel({ images }) {
         {Array.from({ length: totalPages }).map((_, pageIndex) => (
           <div
             key={pageIndex}
-            className="flex w-full flex-shrink-0 justify-around items-center"
+            className={`${className} flex w-full flex-shrink-0 justify-around items-center`}
           >
             {dataImages
               .slice(
@@ -102,7 +103,7 @@ export default function Carousel({ images }) {
                     alt={img.name}
                     className="w-12 h-12 object-contain"
                   />
-                  <p className="text-center text-gray-600 mb-4 text-sm">{img.name}</p>
+                  <p className={`text-center text-gray-600 text-sm ${totalPages > 1 && "mb-4"}`}>{img.name}</p>
                 </div>
               ))}
           </div>

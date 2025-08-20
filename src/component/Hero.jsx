@@ -1,8 +1,8 @@
 
-export default function Hero({py='pt-30 pb-15', animate='animate-fade-down', wPhoto='w-62 h-62', textTitle='6'}) {
+export default function Hero({className='pt-30 pb-15', animate='animate-fade-down', wPhoto='w-62 h-62', classNameTittle='mt-6 text-4xl', button}) {
 
     return (
-        <section className={`${py} bg-gradient-to-b from-blue-50 to-white ${animate}`}>
+        <section className={`${className} bg-gradient-to-b from-blue-200 to-white ${animate}`}>
             <div className="flex flex-col md:flex-row justify-center items-center text-center md:text-left max-w-4xl mx-2 md:mx-auto gap-0 md:gap-8">
                 <img
                     src="myPhotos/formal.jpg"
@@ -10,18 +10,18 @@ export default function Hero({py='pt-30 pb-15', animate='animate-fade-down', wPh
                     className={`${wPhoto} rounded-full shadow-lg mb-6 md:mb-0`}
                 />
                 <div>
-                    <h1 className={`mt-6 text-${textTitle}xl font-extrabold text-blue-700`}>Efrain Robles</h1>
+                    <h1 className={`${classNameTittle} font-extrabold text-blue-700`}>Efrain Robles</h1>
                     <h2 className="mt-2 font-bold text-gray-800">
                         Computer Engineer | FullStack Developer | Dinosaur Fan 🦖 
                     </h2>
                     <p className="mt-2 text-lg text-gray-700">
                         Looking challenges to improve my logical and programming skills.
                     </p>
-                    <div className="text-center flex space-x-4 justify-center md:justify-start">
+                    <div className="text-center flex gap-4 mt-5 justify-center items-center md:justify-start">
                         <a
                             href="https://www.linkedin.com/in/efrain-robles-pulido"
                             target="_blank"
-                            className="mt-6 inline-block bg-gray-500 text-white rounded hover:bg-gray-400 transition"
+                            className="inline-block bg-gray-500 text-white rounded hover:bg-gray-400 transition"
                         >
 
                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="35" height="35" viewBox="0 0 48 48">
@@ -31,7 +31,7 @@ export default function Hero({py='pt-30 pb-15', animate='animate-fade-down', wPh
                         <a
                             href="https://github.com/EfrainRP"
                             target="_blank"
-                            className="mt-6 inline-block bg-gray-500 text-white rounded hover:bg-gray-400 transition"
+                            className="inline-block bg-gray-500 text-white rounded hover:bg-gray-400 transition"
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24"><path fill="#000000" 
                                 d="M12,2C6.48,2 2,6.58 2,12.26C2,16.74 4.87,20.52 8.84,21.78C9.34,21.87 9.5,21.55 9.5,21.27C9.5,21.02 9.49,20.39 9.49,19.7C6.73,20.34 6.14,18.42 6.14,18.42C5.68,17.29 5.03,16.97 5.03,16.97C4.12,16.34 5.1,16.36 5.1,16.36C6.1,16.43 6.63,17.48 6.63,17.48C7.5,19 8.97,18.55 9.54,18.27C9.63,17.6 9.9,17.14 10.2,16.89C7.94,16.63 5.58,15.76 5.58,11.9C5.58,10.8 5.97,9.91 6.64,9.22C6.53,8.96 6.17,7.87 6.74,6.41C6.74,6.41 7.59,6.12 9.49,7.42C10.29,7.18 11.15,7.06 12,7.06C12.85,7.06 13.71,7.18 14.51,7.42C16.41,6.12 17.26,6.41 17.26,6.41C17.83,7.87 17.47,8.96 17.36,9.22C18.03,9.91 18.42,10.8 18.42,11.9C18.42,15.77 16.06,16.62 13.8,16.88C14.19,17.2 14.54,17.85 14.54,18.84C14.54,20.3 14.53,21.39 14.53,21.27C14.53,21.55 14.69,21.87 15.19,21.78C19.16,20.52 22,16.74 22,12.26C22,6.58 17.52,2 12,2Z" 
@@ -41,16 +41,17 @@ export default function Hero({py='pt-30 pb-15', animate='animate-fade-down', wPh
                         
                         <a 
                             // href="assets/EfrainRP"
-                            className="mt-6 p-2 inline-block text-white rounded bg-gray-500 hover:bg-gray-400 transition"
+                            className="inline-flex items-center gap-2 px-4 py-2 text-white rounded bg-gray-500 hover:bg-gray-400 transition"
                             href="C.V._Efrain_Robles.pdf"
                             target="_blank"
                         >
-                            <svg className="w-6 h-6 mr-2 inline-block text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <svg className="w-5 h-5 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                                 <path fillRule="evenodd" d="M20 10H4v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8ZM9 13v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1Z" clipRule="evenodd"/>
                                 <path d="M2 6a2 2 0 0 1 2-2h16a2 2 0 1 1 0 4H4a2 2 0 0 1-2-2Z"/>
                             </svg>
                             See CV
                         </a>
+                        {button}
                     </div>
                 </div>
             </div>

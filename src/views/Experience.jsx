@@ -6,9 +6,21 @@ const experiencia = [
     {
         job: "Web Developer Intern",
         company: "DEXTRA ELECTRONIC",
-        imgCompany: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnCuHl8n7TAodRab70jMzo7APgcEJLpEgqJg&s",
+        imgCompany:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnCuHl8n7TAodRab70jMzo7APgcEJLpEgqJg&s",
         date: "2024 – Present",
-        tech: "Laravel, MySQL, PHP, JavaScript, HTML, CSS, Git, CPanel, Joomla, Laragon",
+        tech: [
+            "Laravel",
+            "MySQL",
+            "PHP",
+            "JavaScript",
+            "HTML",
+            "CSS",
+            "Git",
+            "CPanel",
+            "Joomla",
+            "Laragon",
+        ],
         description:
             "Manage and optimize a Laravel/MySQL e-commerce platform, implementing secure authentication, inventory management, customer–employee interaction features, and database optimizations, while developing custom plugins to meet evolving business needs.",
         plus: [
@@ -24,132 +36,92 @@ const experiencia = [
         ],
         color: "bg-blue-500",
     },
-    //   {
-    //     job: "Desarrollador Backend",
-    //     company: "Freelance",
-    //     date: "2019 – 2021",
-    //     description:
-    //       "Creación de APIs REST, manejo de bases de datos y despliegue de proyectos en entornos en la nube.",
-    //     color: "bg-purple-500",
-    //   },
 ];
 
 export default function Experience() {
     return (
-        <Layout className='bg-gradient-to-b from-gray-50 to-white text-gray-800'>
-            {/* <br /><br /><br />
-            <section id="about" className="max-w-6xl mx-auto py-15 px-4 animate-fade-in ">
-                <h2 className="text-3xl font-bold text-center mb-8">Experience</h2>
+        // dark:from-gray-900 dark:to-gray-950 dark:text-gray-100
+        <Layout className="bg-gradient-to-b from-gray-800 to-white">
+            <div className="max-w-4xl mx-auto px-6 pt-25 pb-16 animate-fade-in">
+                <h2 className="text-3xl font-bold text-center mb-12">Work Experience</h2>
 
-                <h3 className="text-2xl font-bold mb-8">Dextra Electronic</h3>
-                <div className="flex flex-col md:flex-row items-center justify-center gap-10">
-                    <p className="text-white-800 text-lg leading-relaxed text-justify">
-                        Manage and optimize a Laravel/MySQL e-commerce platform, implementing secure authentication, inventory management, customer–employee interaction features, and database optimizations, while developing custom plugins to meet evolving business needs.
-                    </p>
-                    <img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnCuHl8n7TAodRab70jMzo7APgcEJLpEgqJg&s"
-                        className="h-auto w-45 rounded-lg shadow-xl dark:shadow-gray-800"
-                    />
-                </div>
-                <hr className="border-t-3 border-orange-500 w-1/20 mx-auto my-6 rounded mb-8"/>
-                <div className="flex flex-col md:flex-row items-center justify-center gap-10">
-                    <img
-                        src="myPhotos/GroupDragon.jpg"
-                        className="h-auto w-45 rounded-lg shadow-xl dark:shadow-gray-800"
-                    />
-                    <p className="text-white-800 text-lg leading-relaxed text-justify">
-                        Dragon Group, Mexico City – Develop an automated broadcasting workflow using MUSE Automator (Node.js), streamlining audio/video scene management, reducing manual intervention, and ensuring precise, client-specified playback.
-                    </p>
-                </div>
-            </section> */}
-            
-            {/* <section className="mt-5 py-20 h-full bg-gradient-to-b from-gray-300 to-white text-gray-800"> */}
-                <div className="max-w-4xl mx-auto px-6 mt-25 animate-fade-in">
-                    <h2 className="text-3xl font-bold text-center mb-12">
-                        Work Experience
-                    </h2>
+{/* dark:border-gray-700 */}
+                <div className="relative border-l-2 border-gray-300">
+                    {experiencia.map((item, index) => (
+                        <motion.div
+                            key={index}
+                            className="mb-12 ml-6 relative group"
+                            initial={{ opacity: 0, y: -50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: index * 0.15 }}
+                            viewport={{ once: true }}
+                        >
+                            {/* Punto de la línea */}
+                            <span
+                                className={`absolute w-4 h-4 ${item.color} rounded-full -left-8 top-3 ring-2 ring-white dark:ring-gray-900 group-hover:scale-125 transition-transform`}
+                            ></span>
 
-                    <div className="relative border-l border-gray-200">
-                        {experiencia.map((item, index) => (
-                            <motion.div
-                                key={index}
-                                className="mb-12 ml-6 relative shadow-lg hover:shadow-2xl transition-shadow duration-300"
-                                initial={{ opacity: 0, y: -50 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 0.6, delay: index * 0.15 }}
-                                viewport={{ once: true }}
-                            >
-                                {/* Punto de la línea */}
-                                <span
-                                    className={`absolute w-4 h-4 ${item.color} rounded-full mt-15 -left-8 transition-colors duration-300`}
-                                ></span>
-
-                                {/* Card con efecto glass */}
-                                <div className="backdrop-blur-md bg-white/40 border border-white/60 shadow-md rounded-xl p-5 hover:shadow-lg hover:scale-[1.03] transition-transform duration-300">
-                                    <div className="flex items-center mb-3">
-                                        <img
-                                            className='w-16 h-16 mx-5 rounded-full shadow-lg dark:shadow-gray-500'    
-                                            src={item.imgCompany}
-                                        />
-                                        <div>
-                                            <h3 className="text-lg font-semibold">{item.job}</h3>
-                                            <p className="text-gray-500">{item.company}</p>
-                                            <span className="text-sm text-gray-400">{item.date}</span>
-                                            <p className="hidden md:block mt-4 text-sm text-gray-400 leading-relaxed">
-                                                {item.tech}
-                                            </p>    
-                                        </div>
+                            {/* Card */}
+                            {/* dark:border-gray-700  dark:bg-gray-800/60 */}
+                            <div className="backdrop-blur-md bg-blue-300/80 text-gray-800 rounded-xl p-5 shadow-md hover:shadow-xl hover:scale-[1.02] transition duration-300">
+                                <div className="flex items-center gap-4 mb-4">
+                                    <img
+                                        className="w-16 h-16 rounded-full shadow-md  group-hover:ring-blue-400 transition"
+                                        // ring-2 ring-gray-200 dark:ring-gray-600
+                                        src={item.imgCompany}
+                                        alt={item.company}
+                                    />
+                                    <div className="p-2 pr-10 bg-white/85 rounded-lg">
+                                        <h3 className="text-lg md:text-2xl font-bold">{item.job}</h3>
+                                        <p className="text-gray-700">{item.company}</p> {/*dark:text-gray-400 */}
+                                        <span className="text-sm text-gray-700/85">{item.date}</span>
                                     </div>
-                                    <p className="md:hidden mt-4 text-sm text-gray-400 leading-relaxed">
-                                        {item.tech}
-                                    </p>  
-                                    <p className="mt-2 text-gray-600 leading-relaxed">
-                                        {item.description}
-                                    </p>
+                                </div>
 
-                                    {item.plus && (
-                                    <div className="mt-4 p-3 bg-gray-100 rounded-lg mx-auto shadow-md">
-                                        {item.plus.map((item, index) => (
-                                            <Accordion title={item.top} key={index}>
-                                                <p className="text-gray-500">{item.description}</p>
-                                                {item.image && (
+                                {/* Tech chips */}
+                                <div className="flex flex-wrap items-center justify-center gap-2 mb-3">
+                                    {item.tech.map((tech, i) => (
+                                        <span
+                                            key={i}
+                                            // dark:bg-gray-700 dark:text-gray-300
+                                            className="px-3 py-1 text-xs bg-gray-200/70  text-gray-700  rounded-full"
+                                        >
+                                            {tech}
+                                        </span>
+                                    ))}
+                                </div>
+
+                                {/* Descripción */}
+                                <p className="text-gray-600 text-justify leading-relaxed bg-white/55 rounded-lg px-5 py-2 mb-4"> {/* dark:text-gray-300 */}
+                                    {item.description}
+                                </p>
+
+                                {/* Extra (Accordion) */}
+                                {item.plus && (
+                                    // dark:bg-gray-800
+                                        item.plus.map((extra, index) => (
+                                            <Accordion title={extra.top} key={index} bg_button='bg-gray-300/85'
+                                            classNameChildren="flex flex-col md:flex-row justify-between items-center gap-4 bg-white"
+                                            >
+                                                <p 
+                                                // dark:text-gray-400
+                                                className="text-gray-500 text-justify">{extra.description}</p>
+                                                {extra.image && (
                                                     <img
-                                                        src={item.image.img}
-                                                        alt={item.image.imgAlt}
-                                                        className="mt-2 w-40 mx-2 h-auto rounded-lg shadow-sm"
+                                                        src={extra.image.img}
+                                                        alt={extra.image.imgAlt}
+                                                        className="w-48 rounded-lg shadow-md"
                                                     />
                                                 )}
                                             </Accordion>
-                                        ))}
-                                    </div>
-                                    )}
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
-                    {/* <motion.div {/* Card for upcoming position 
-                        initial={{ opacity: 0, x: -50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.6, delay: 0.15 }}
-                        viewport={{ once: true }}
-                        className="mt-8 p-5 border border-dashed border-indigo-400 rounded-lg bg-indigo-50 text-indigo-700">
-                        
-                        <h3 className="text-lg font-semibold">Upcoming Position</h3>
-                        <p className="mt-1 text-sm text-indigo-600">Start Date: October 2025</p>
-
-                        <div className="mt-3">
-                            <p className="text-base font-medium">Backend Developer</p>
-                            <p className="text-sm">Company X — Process Automation Project</p>
-                        </div>
-
-                        <div className="mt-4">
-                            <span className="inline-block px-3 py-1 text-xs font-medium bg-indigo-200 text-indigo-800 rounded-full">
-                                Confirmed
-                            </span>
-                        </div>
-                    </motion.div> */}
-
+                                        ))
+                                    
+                                )}
+                            </div>
+                        </motion.div>
+                    ))}
                 </div>
+            </div>
         </Layout>
     );
 }
