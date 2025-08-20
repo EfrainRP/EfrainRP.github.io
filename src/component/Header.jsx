@@ -14,7 +14,7 @@ export default function Header() {
     ];
 
     return (
-        <header className="fixed w-full top-0 z-50 shadow-md bg-white dark:bg-gray-900">
+        <header className="fixed w-full top-0 z-50 shadow-md bg-gray-900 rounded-b-2xl">
             <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
                 <Link to="/" className="flex items-center gap-2">
