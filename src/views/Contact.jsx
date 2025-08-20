@@ -72,7 +72,7 @@ export default function Contact() {
         <Layout className="animate-fade-in">
             <div className="max-w-3xl mx-auto mt-15 px-6 py-10 text-gray-800">
                 <h2 className="text-2xl text-gray-100 font-bold mb-6">
-                    Envíanos un mensaje
+                    Contact Me
                 </h2>
 
                 <form

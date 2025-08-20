@@ -10,8 +10,8 @@ export default function Header() {
         <header className="fixed w-full top-0 z-50 shadow-md bg-white dark:bg-gray-900">
             <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
                 <Link to="/">
-                    <h1 className="md:hidden text-xl font-bold text-blue-600 dark:text-white">Dev Efrain</h1>
-                    <h1 className="hidden md:block text-xl font-bold text-blue-600 dark:text-white">Developer Efrain</h1>
+                    <h1 className="hidden sm:block md:text-2xl font-bold text-blue-600 dark:text-white">Developer Efrain</h1>
+                    <h1 className="sm:hidden text-xl font-bold text-blue-600 dark:text-white">Dev Efrain</h1>
                 </Link>
 
                 {/* Botón hamburguesa para móvil */}
@@ -21,7 +21,7 @@ export default function Header() {
                     aria-label="Abrir menú"
                 >
                     <svg
-                        className="w-6 h-6"
+                        className={`w-6 h-6 transition-transform duration-300 ${isOpen ? 'rotate-90' : 'rotate-0'}`}
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -36,24 +36,22 @@ export default function Header() {
 
                 {/* Menú de navegación */}
                 <nav
-                    className={`${isOpen ? 'block' : 'hidden'
-                        } absolute top-full left-0 w-full bg-white dark:bg-gray-900 md:static md:flex md:w-auto md:space-x-6 md:block transition-all duration-300`}
+                    className={`absolute top-full left-0 w-full bg-white dark:bg-gray-900 md:static md:flex md:w-auto md:space-x-6 duration-300 ${isOpen ? 'opacity-100 translate-y-0 visible' : 'opacity-0 -translate-y-5 invisible'} md:visible md:opacity-100 md:translate-y-0 sm:md:opacity-0`}
+    //             className={`absolute top-full left-0 w-full bg-white dark:bg-gray-900 md:static md:flex md:w-auto md:space-x-6 duration-300 ease-in-out
+    // ${isOpen ? 'block' : 'hidden'}`}
+                    // className={`absolute top-full left-0 w-full bg-white dark:bg-gray-900 md:static md:flex md:w-auto md:space-x-6 transition-all duration-400 ${isOpen ? 'opacity-100 translate-y-0 visible' : 'opacity-0 -translate-y-5 invisible md:visible md:opacity-100 md:translate-y-0'}`}
                 >
-                    <Link to="/" className={`block px-4 py-2 hover:text-blue-600 dark:hover:text-blue-400 transition ${pathname === '/' ? 'text-blue-600 dark:text-blue-400' : 'text-gray-700 dark:text-gray-200'}`}>
-                        Home
-                    </Link>
-                    <Link to="/projects" className={`block px-4 py-2 hover:text-blue-600 dark:hover:text-blue-400 transition ${pathname === '/projects' ? 'text-blue-600 dark:text-blue-400' : 'text-gray-700 dark:text-gray-200'}`}>
-                        Projects
-                    </Link>
-                    <Link to="/experience" className={`block px-4 py-2 hover:text-blue-600 dark:hover:text-blue-400 transition ${pathname === '/experience' ? 'text-blue-600 dark:text-blue-400' : 'text-gray-700 dark:text-gray-200'}`}>
-                        Experience
-                    </Link>
-                    <Link to="/education" className={`block px-4 py-2 hover:text-blue-600 dark:hover:text-blue-400 transition ${pathname === '/education' ? 'text-blue-600 dark:text-blue-400' : 'text-gray-700 dark:text-gray-200'}`}>
-                        Education
-                    </Link>
-                    <Link to="/contact" className={`block px-4 py-2 hover:text-blue-600 dark:hover:text-blue-400 transition ${pathname === '/contact' ? 'text-blue-600 dark:text-blue-400' : 'text-gray-700 dark:text-gray-200'}`}>
-                        Contact
-                    </Link>
+                    {['/', '/projects', '/experience', '/education', '/contact'].map((link, i) => (
+                        <Link
+                            key={i}
+                            to={link}
+                            className={`block px-4 py-2 hover:text-blue-600 dark:hover:text-blue-400 transition ${
+                                pathname === link ? 'text-blue-600 dark:text-blue-400' : 'text-gray-700 dark:text-gray-200'
+                            }`}
+                        >
+                        {link === '/' ? 'Home' : link.slice(1).charAt(0).toUpperCase() + link.slice(2)}
+                        </Link>
+                    ))}
                 </nav>
             </div>
         </header>

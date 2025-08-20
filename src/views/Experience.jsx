@@ -7,7 +7,7 @@ const experiencia = [
         job: "Web Developer Intern",
         company: "DEXTRA ELECTRONIC",
         imgCompany: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnCuHl8n7TAodRab70jMzo7APgcEJLpEgqJg&s",
-        date: "2024 – Preset",
+        date: "2024 – Present",
         tech: "Laravel, MySQL, PHP, JavaScript, HTML, CSS, Git, CPanel, Joomla, Laragon",
         description:
             "Manage and optimize a Laravel/MySQL e-commerce platform, implementing secure authentication, inventory management, customer–employee interaction features, and database optimizations, while developing custom plugins to meet evolving business needs.",
@@ -95,12 +95,14 @@ export default function Experience() {
                                             <h3 className="text-lg font-semibold">{item.job}</h3>
                                             <p className="text-gray-500">{item.company}</p>
                                             <span className="text-sm text-gray-400">{item.date}</span>
-                                            <p className="mt-4 text-sm text-gray-400 leading-relaxed">
+                                            <p className="hidden md:block mt-4 text-sm text-gray-400 leading-relaxed">
                                                 {item.tech}
                                             </p>    
                                         </div>
                                     </div>
-                                    
+                                    <p className="md:hidden mt-4 text-sm text-gray-400 leading-relaxed">
+                                        {item.tech}
+                                    </p>  
                                     <p className="mt-2 text-gray-600 leading-relaxed">
                                         {item.description}
                                     </p>

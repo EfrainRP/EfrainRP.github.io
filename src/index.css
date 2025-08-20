@@ -1,6 +1,32 @@
 @import "tailwindcss";
 /* Animaciones personalizadas */
 @layer utilities {
+  .animate-fade-up-fast {
+    animation: fadeUpFast 0.3s ease-out;
+  }
+  @keyframes fadeUpFast {
+    from {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  }
+  .animate-fade-down-fast {
+    animation: fadeDownFast 0.3s ease-out;
+  }
+  @keyframes fadeDownFast {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
   .animate-fade-in {
     animation: fadeIn 1s ease-out;
   }
