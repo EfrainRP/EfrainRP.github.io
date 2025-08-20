@@ -39,7 +39,7 @@ export default function Hero({className='pt-30 pb-15', animate='animate-fade-dow
                             </svg>
                         </a>
                         
-                        <a 
+                        {/* <a 
                             // href="assets/EfrainRP"
                             className="inline-flex items-center gap-2 px-4 py-2 text-white rounded bg-gray-500 hover:bg-gray-400 transition"
                             href="C.V._Efrain_Robles.pdf"
@@ -50,7 +50,7 @@ export default function Hero({className='pt-30 pb-15', animate='animate-fade-dow
                                 <path d="M2 6a2 2 0 0 1 2-2h16a2 2 0 1 1 0 4H4a2 2 0 0 1-2-2Z"/>
                             </svg>
                             See CV
-                        </a>
+                        </a> */}
                         {button}
                     </div>
                 </div>
