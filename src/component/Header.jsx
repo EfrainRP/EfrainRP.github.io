@@ -28,7 +28,7 @@ export default function Header() {
 
                 {/* Botón hamburguesa */}
                 <button
-                    className="md:hidden text-gray-700 dark:text-white focus:outline-none"
+                    className="md:hidden text-white focus:outline-none"
                     onClick={() => setIsOpen(!isOpen)}
                     aria-label="Abrir menú"
                 >
@@ -60,7 +60,7 @@ export default function Header() {
                 {/* Menú navegación */}
                 <nav
                     className={`
-                        absolute md:static top-full left-0 w-full md:w-auto bg-white dark:bg-gray-900 
+                        absolute md:static top-full left-0 w-full md:w-auto bg-gray-900 
                         flex flex-col md:flex-row md:space-x-6 shadow-md md:shadow-none
                         transition-all duration-400 ease-in-out
                         ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0 md:max-h-none md:opacity-100"}
@@ -72,9 +72,9 @@ export default function Header() {
                             key={path}
                             to={path}
                             onClick={() => setIsOpen(false)} // cerrar menú al hacer click en móvil
-                            className={`px-4 py-2 hover:text-blue-600 dark:hover:text-blue-400 transition ${pathname === path
-                                ? "text-blue-600 dark:text-blue-400"
-                                : "text-gray-700 dark:text-gray-200"
+                            className={`px-4 py-2 hover:text-blue-600 transition ${pathname === path
+                                ? "text-blue-600"
+                                : "text-white"
                                 }`}
                         >
                             {label}
