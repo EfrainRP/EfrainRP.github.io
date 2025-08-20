@@ -18,10 +18,10 @@ export default function Header() {
             <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
                 <Link to="/" className="flex items-center gap-2">
-                    <h1 className="hidden sm:block md:text-2xl font-bold text-blue-600 dark:text-white">
+                    <h1 className="hidden sm:block md:text-2xl font-bold text-white">
                         Developer Efrain
                     </h1>
-                    <h1 className="sm:hidden text-xl font-bold text-blue-600 dark:text-white">
+                    <h1 className="sm:hidden text-xl font-bold text-white">
                         Dev Efrain
                     </h1>
                 </Link>
