@@ -149,7 +149,7 @@ export default function Start() {
                         </motion.div>
                         {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
                         <img 
-                            className='w-42 md:w-60 rounded-3xl mx-auto transition-transform duration-300 hover:scale-[1.05] shadow-lg shadow-black/70 hover:shadow-2xl' 
+                            className='w-36 md:w-40 rounded-3xl mx-auto transition-transform duration-300 hover:scale-[1.05] shadow-lg shadow-black/70 hover:shadow-2xl' 
                             alt='Rex Walk'
                             src='rex.gif'
                         />
