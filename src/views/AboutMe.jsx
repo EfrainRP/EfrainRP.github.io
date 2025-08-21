@@ -9,7 +9,7 @@ export default function AboutMe() {
             <Hero animate={'animate-fade-in'}
                 button={
                     <Link
-                        className="inline-flex items-center gap-2 px-4 py-2 text-white rounded bg-gray-500 hover:bg-gray-400 transition"
+                        className="inline-flex items-center gap-2 px-4 py-2 text-white rounded bg-gray-500 hover:bg-gray-400 transition hover:shadow-lg hover:shadow-gray-400"
                         to="/contact"
                     >
                         <svg className="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
@@ -19,7 +19,7 @@ export default function AboutMe() {
                     </Link>
                 }
             />
-            <section id="about" className="max-w-6xl mx-auto py-15 px-4 animate-fade-in ">
+            <section id="about" className="max-w-6xl mx-auto py-15 px-4 animate-fade-in group">
                 <h2 className="text-3xl font-bold text-center mb-8">About me</h2>
                 <div className="flex flex-col md:flex-row items-center justify-center gap-10">
                     <p className="text-white-800 text-lg leading-relaxed text-justify">
@@ -30,7 +30,7 @@ export default function AboutMe() {
                     </p>
                     <img
                         src="myPhotos/informal.jpg"
-                        className="h-auto w-45 rounded-lg shadow-xl dark:shadow-gray-800"
+                        className="h-auto w-45 rounded-lg shadow-xl dark:shadow-gray-800 transition-transform duration-380 group-hover:scale-[1.1]"
                     />
                 </div>
             </section>

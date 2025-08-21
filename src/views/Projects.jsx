@@ -160,7 +160,7 @@ export default function Start() {
             <Hero className={'py-10 md:pt-1 md:pb-5'} wPhoto={'w-30'} classNameTittle={'md:mt-6 2xl'} 
                 button={
                     <Link
-                        className="inline-flex items-center gap-2 px-4 py-2 text-white rounded bg-gray-500 hover:bg-gray-400 transition"
+                        className="inline-flex items-center gap-2 px-4 py-2 text-white rounded bg-gray-500 hover:bg-gray-400 transition hover:shadow-lg hover:shadow-gray-400"
                         to="/contact"
                     >
                         <svg className="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
