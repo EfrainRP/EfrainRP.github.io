@@ -17,11 +17,16 @@ export default function Header() {
         <header className="fixed w-full top-0 z-50 shadow-md bg-gray-900 rounded-b-2xl">
             <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
-                <Link to="/" className="flex items-center gap-2">
-                    <h1 className="hidden sm:block md:text-2xl font-bold text-white">
+                <Link to="/" className="flex items-center gap-4 group">
+                    <img 
+                        alt='Dino studying'
+                        className='w-10 rounded-full mx-auto transition-transform duration-300 group-hover:scale-[1.30]' 
+                        src='parasourStay.gif'/>
+
+                    <h1 className={`hidden sm:block md:text-2xl font-bold text-white ${pathname !== '/' && 'group-hover:text-blue-400'}`}>
                         Developer Efrain
                     </h1>
-                    <h1 className="sm:hidden text-xl font-bold text-white">
+                    <h1 className={`sm:hidden text-xl font-bold text-white`}>
                         Dev Efrain
                     </h1>
                 </Link>
@@ -61,7 +66,7 @@ export default function Header() {
                 <nav
                     className={`
                         absolute md:static top-full left-0 w-full md:w-auto bg-gray-900 
-                        flex flex-col md:flex-row md:space-x-6 shadow-md md:shadow-none
+                        flex flex-col md:flex-row md:space-x-2 shadow-md md:shadow-none
                         transition-all duration-400 ease-in-out
                         ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0 md:max-h-none md:opacity-100"}
                         overflow-hidden md:overflow-visible
@@ -72,8 +77,8 @@ export default function Header() {
                             key={path}
                             to={path}
                             onClick={() => setIsOpen(false)} // cerrar menú al hacer click en móvil
-                            className={`px-4 py-2 hover:text-blue-600 transition ${pathname === path
-                                ? "text-blue-600"
+                            className={`px-4 py-2 hover:text-blue-400 transition ${pathname === path
+                                ? "text-blue-500"
                                 : "text-white"
                                 }`}
                         >

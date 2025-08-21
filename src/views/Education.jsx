@@ -76,8 +76,13 @@ export default function Education() {
                         </p>
 
                     </motion.div>
+                    <img 
+                        alt='Dino studying'
+                        className='w-50 rounded-lg mx-auto transition-transform duration-300 hover:scale-[1.05] shadow-lg shadow-black/70 hover:shadow-2xl' 
+                        src='dinoStudying.gif'/>
                 </div>
             </div>
+
 
             {/* <section id="about" className="max-w-6xl mx-auto py-15 px-4 animate-fade-in ">
                 <h2 className="text-3xl font-bold text-center mb-8">Education</h2>

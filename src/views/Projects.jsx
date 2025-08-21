@@ -48,14 +48,14 @@ export default function Start() {
                                     <a
                                         href="https://github.com/EfrainRP/AiSportFrontend.git"
                                         target="_blank"
-                                        className="flex justify-center items-center p-1 text-xs md:text-base bg-blue-500 rounded transition shadow-lg shadow-blue-500/50 hover:bg-gray-400 hover:shadow-lg hover:shadow-gray-500"
+                                        className="flex justify-center items-center p-1 text-xs md:text-base bg-yellow-500 rounded transition shadow-lg shadow-yellow-500/50 hover:bg-gray-400 hover:shadow-gray-500"
                                     >
                                         <svg xmlns="http://www.w3.org/2000/svg" className='w-6 md:w-6' viewBox="0 0 24 24"><path fill="#000000" 
                                             d="M12,2C6.48,2 2,6.58 2,12.26C2,16.74 4.87,20.52 8.84,21.78C9.34,21.87 9.5,21.55 9.5,21.27C9.5,21.02 9.49,20.39 9.49,19.7C6.73,20.34 6.14,18.42 6.14,18.42C5.68,17.29 5.03,16.97 5.03,16.97C4.12,16.34 5.1,16.36 5.1,16.36C6.1,16.43 6.63,17.48 6.63,17.48C7.5,19 8.97,18.55 9.54,18.27C9.63,17.6 9.9,17.14 10.2,16.89C7.94,16.63 5.58,15.76 5.58,11.9C5.58,10.8 5.97,9.91 6.64,9.22C6.53,8.96 6.17,7.87 6.74,6.41C6.74,6.41 7.59,6.12 9.49,7.42C10.29,7.18 11.15,7.06 12,7.06C12.85,7.06 13.71,7.18 14.51,7.42C16.41,6.12 17.26,6.41 17.26,6.41C17.83,7.87 17.47,8.96 17.36,9.22C18.03,9.91 18.42,10.8 18.42,11.9C18.42,15.77 16.06,16.62 13.8,16.88C14.19,17.2 14.54,17.85 14.54,18.84C14.54,20.3 14.53,21.39 14.53,21.27C14.53,21.55 14.69,21.87 15.19,21.78C19.16,20.52 22,16.74 22,12.26C22,6.58 17.52,2 12,2Z" 
                                         />
                                         </svg> 
                                         <span className="ml-2 hidden md:block">FrontEnd</span>
-                                        <span className="ml-2 block md:hidden">Front</span>
+                                        <span className="ml-2 sm:hidden">Front</span>
                                     </a>
                                     <a
                                         href="https://github.com/EfrainRP/AiSportBackend.git"
@@ -67,10 +67,10 @@ export default function Start() {
                                         />
                                         </svg> 
                                         <span className="ml-2 hidden md:block">BackEnd</span>
-                                        <span className="ml-2 block md:hidden">BackEnd</span>
+                                        <span className="ml-2 sm:hidden">Back</span>
                                     </a>
                                     <a 
-                                        className="flex justify-center items-center p-1 text-white text-xs md:text-base rounded bg-red-500 rounded transition hover:bg-gray-400 hover:shadow-lg hover:shadow-gray-500"
+                                        className="flex justify-center items-center p-1 text-white text-xs md:text-base rounded bg-red-500 rounded transition shadow-red-400/50 shadow-lg hover:bg-gray-400 hover:shadow-gray-500"
                                         href="AiSportPDF.pdf"
                                         target="_blank"
                                     >
@@ -94,7 +94,7 @@ export default function Start() {
                                 <a
                                         href="https://sites.google.com/academicos.udg.mx/proyectos-modulares-divtic/ing-computación?authuser=1#h.md58eqjjgejd"
                                         target="_blank"
-                                        className="flex justify-center items-center mx-auto md:mx-65 p-1 text-xs md:text-base mt-3 bg-purple-400 rounded  transition shadow-lg shadow-purple-400/50 hover:bg-gray-400 hover:shadow-lg hover:shadow-gray-500"
+                                        className="flex justify-center items-center mx-auto md:mx-65 p-1 text-xs md:text-base mt-3 bg-purple-400 rounded transition shadow-lg shadow-purple-400/50 hover:bg-gray-400  hover:shadow-gray-500"
                                     >
                                         <img
                                             src="https://upload.wikimedia.org/wikipedia/commons/6/68/Escudo_CUCEI.svg"
@@ -137,7 +137,7 @@ export default function Start() {
                                 <a
                                     href="https://github.com/EfrainRP/SeminarioDeAlgoritmia/tree/main/ACT9"
                                     target="_blank"
-                                    className="w-30 mx-auto mt-2 flex justify-center items-center p-1 text-xs md:text-base bg-gray-500/90 rounded transition shadow-lg hover:bg-gray-400 shadow-blue-500/50 hover:bg-gray-400 hover:shadow-lg hover:shadow-gray-500"
+                                    className="w-30 mx-auto mt-2 flex justify-center items-center p-1 text-xs md:text-base bg-yellow-500 rounded transition shadow-lg shadow-yellow-500/50 hover:bg-gray-400 hover:shadow-gray-500"
                                 >
                                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#000000" 
                                         d="M12,2C6.48,2 2,6.58 2,12.26C2,16.74 4.87,20.52 8.84,21.78C9.34,21.87 9.5,21.55 9.5,21.27C9.5,21.02 9.49,20.39 9.49,19.7C6.73,20.34 6.14,18.42 6.14,18.42C5.68,17.29 5.03,16.97 5.03,16.97C4.12,16.34 5.1,16.36 5.1,16.36C6.1,16.43 6.63,17.48 6.63,17.48C7.5,19 8.97,18.55 9.54,18.27C9.63,17.6 9.9,17.14 10.2,16.89C7.94,16.63 5.58,15.76 5.58,11.9C5.58,10.8 5.97,9.91 6.64,9.22C6.53,8.96 6.17,7.87 6.74,6.41C6.74,6.41 7.59,6.12 9.49,7.42C10.29,7.18 11.15,7.06 12,7.06C12.85,7.06 13.71,7.18 14.51,7.42C16.41,6.12 17.26,6.41 17.26,6.41C17.83,7.87 17.47,8.96 17.36,9.22C18.03,9.91 18.42,10.8 18.42,11.9C18.42,15.77 16.06,16.62 13.8,16.88C14.19,17.2 14.54,17.85 14.54,18.84C14.54,20.3 14.53,21.39 14.53,21.27C14.53,21.55 14.69,21.87 15.19,21.78C19.16,20.52 22,16.74 22,12.26C22,6.58 17.52,2 12,2Z" 
@@ -148,6 +148,11 @@ export default function Start() {
                             </div>
                         </motion.div>
                         {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+                        <img 
+                            className='w-42 md:w-60 rounded-3xl mx-auto transition-transform duration-300 hover:scale-[1.05] shadow-lg shadow-black/70 hover:shadow-2xl' 
+                            alt='Rex Walk'
+                            src='rex.gif'
+                        />
 
                     </div>
                 </div>

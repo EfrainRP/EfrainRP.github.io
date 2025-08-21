@@ -40,7 +40,6 @@ export default function Hero({className='pt-30 pb-15', animate='animate-fade-dow
                         </a>
                         
                         <a 
-                            // href="assets/EfrainRP"
                             className="inline-flex items-center gap-2 px-4 py-2 text-white rounded bg-gray-500 hover:bg-gray-400 transition"
                             href="C.V._Efrain_Robles.pdf"
                             target="_blank"

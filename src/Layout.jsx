@@ -29,9 +29,17 @@ export default function Layout({ children, className }) {
       </main>
       
 
-      <footer className="bg-gray-800 text-white p-4 text-center animate-fade-in">
+      <footer className="bg-gray-800 text-white p-4 text-center relative overflow-hidden animate-fade-in">
         <p>Made by Efrain Robles.🦕</p>
         <p>Made with 🧠 & 🔨 in React & Tailwind.</p>
+
+        <img className='hidden md:block w-15 absolute bottom-5 top-3 rounded-full' 
+          alt='Stegosaur walks'
+          src='walkStego.gif'/>
+        <img className='hidden md:block w-15 absolute bottom-5 top-3 right-5 rounded-2xl' 
+          alt='Velociraptor runs'
+          src='runVelo.gif'/>
+        
       </footer>
     </div>
   );
