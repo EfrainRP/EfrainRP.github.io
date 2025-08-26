@@ -43,7 +43,7 @@ export default function Experience() {
         // dark:from-gray-900 dark:to-gray-950 dark:text-gray-100
         <Layout className="bg-gradient-to-b from-gray-800 to-white">
             <div className="max-w-4xl mx-auto px-6 pt-25 pb-16 animate-fade-in">
-                <h2 className="text-3xl font-bold text-center mb-12 transition-scale duration-400 hover:scale-[1.18]">Work Experience</h2>
+                <h2 className="text-3xl font-bold text-center mb-12 transition-all duration-400 hover:scale-[1.18]">Work Experience</h2>
 
 {/* dark:border-gray-700 */}
                 <div className="relative border-l-2 border-gray-300">

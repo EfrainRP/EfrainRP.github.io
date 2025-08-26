@@ -13,7 +13,7 @@ export default function Start() {
         <Layout className='animate-fade-down'>
             <section className="mt-5 py-20 bg-gradient-to-b from-gray-800 to-white">
                 <div className="max-w-4xl mx-auto px-6">
-                    <h2 className="text-3xl font-bold text-center mb-12 transition-scale duration-400 hover:scale-[1.18]">
+                    <h2 className="text-3xl font-bold text-center mb-12 transition-all duration-400 hover:scale-[1.18]">
                         My Projects
                     </h2>
 
