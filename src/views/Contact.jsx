@@ -64,7 +64,7 @@ export default function Contact() {
     return (
         <Layout className="bg-gradient-to-b from-gray-800 to-white animate-fade-in">
             <div className="max-w-3xl mx-auto mt-15 px-6 py-10 text-gray-800">
-                <h2 className="text-2xl text-gray-100 font-bold mb-6">
+                <h2 className="text-2xl text-gray-100 font-bold mb-6 transition-scale duration-400 hover:scale-[1.05]">
                     Contact Me
                 </h2>
 

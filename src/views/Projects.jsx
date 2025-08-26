@@ -13,7 +13,7 @@ export default function Start() {
         <Layout className='animate-fade-down'>
             <section className="mt-5 py-20 bg-gradient-to-b from-gray-800 to-white">
                 <div className="max-w-4xl mx-auto px-6">
-                    <h2 className="text-3xl font-bold text-center mb-12">
+                    <h2 className="text-3xl font-bold text-center mb-12 transition-scale duration-400 hover:scale-[1.18]">
                         My Projects
                     </h2>
 
@@ -157,7 +157,7 @@ export default function Start() {
                     </div>
                 </div>
             </section>
-            <Hero className={'py-10 md:pt-1 md:pb-5'} wPhoto={'w-30'} classNameTittle={'md:mt-6 2xl'} 
+            <Hero className={'py-10 md:pt-1 md:pb-5'} wPhoto={'w-30'} classNameTittle={'md:mt-6 text-2xl'} 
                 button={
                     <Link
                         className="inline-flex items-center gap-2 px-4 py-2 text-white rounded bg-gray-500 hover:bg-gray-400 transition hover:shadow-lg hover:shadow-gray-400"

@@ -6,7 +6,7 @@ export default function Education() {
         <Layout className="bg-gradient-to-b from-gray-800 to-white">
             {/* <div className="max-w-4xl mx-auto px-6 py-16 bg-gradient-to-b from-gray-800 to-white text-gray-800 mt-12"> */}
             <div className="max-w-4xl mx-auto mt-25 mb-15 animate-slideLeft ">
-                <h2 className="text-3xl font-bold text-center mt-25 mb-10">Education</h2>
+                <h2 className="text-3xl font-bold text-center mt-25 mb-10 transition-scale duration-400 hover:scale-[1.18]">Education</h2>
 
                 <div className="max-w-4xl space-y-8 px-6 mx-auto text-gray-800">
                     {/* CUCEI */}
