@@ -23,7 +23,7 @@ export default function Header() {
                         className='w-10 rounded-full mx-auto transition-transform duration-300 group-hover:scale-[1.30]' 
                         src='parasourStay.gif'/>
 
-                    <h1 className={`hidden sm:block md:text-2xl font-bold text-white ${pathname !== '/' && 'group-hover:text-blue-400'}`}>
+                    <h1 className={`hidden sm:block md:text-2xl font-bold text-white transition-transform duration-300 group-hover:scale-[1.05] ${pathname !== '/' && 'group-hover:text-blue-400'}`}>
                         Developer Efrain
                     </h1>
                     <h1 className={`sm:hidden text-xl font-bold text-white`}>
@@ -67,7 +67,7 @@ export default function Header() {
                     className={`
                         absolute md:static top-full left-0 w-full md:w-auto bg-gray-900 
                         flex flex-col md:flex-row md:space-x-2 shadow-md md:shadow-none
-                        transition-all duration-400 ease-in-out
+                        transition-all duration-400 ease-in-out 
                         ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0 md:max-h-none md:opacity-100"}
                         overflow-hidden md:overflow-visible
                     `}
@@ -77,7 +77,7 @@ export default function Header() {
                             key={path}
                             to={path}
                             onClick={() => setIsOpen(false)} // cerrar menú al hacer click en móvil
-                            className={`px-4 py-2 hover:text-blue-400 transition ${pathname === path
+                            className={`px-4 py-2 hover:text-blue-400 transition hover:scale-[1.14] ${pathname === path
                                 ? "text-blue-500"
                                 : "text-white"
                                 }`}

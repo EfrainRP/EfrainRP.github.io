@@ -70,7 +70,7 @@ export default function Contact() {
 
                 <form
                     onSubmit={handleSubmit}
-                    className="space-y-4 bg-white p-6 rounded-xl shadow-md"
+                    className="space-y-4 bg-white p-6 rounded-xl shadow-md transition-scale duration-400 ease-in-out hover:scale-[1.02]"
                 >
                     <input
                         type="text"

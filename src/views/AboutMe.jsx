@@ -20,7 +20,7 @@ export default function AboutMe() {
                 }
             />
             <section id="about" className="max-w-6xl mx-auto py-15 px-4 animate-fade-in group">
-                <h2 className="text-3xl font-bold text-center mb-8">About me</h2>
+                <h2 className="text-3xl font-bold text-center mb-8 transition-all duration-380 group-hover:scale-[1.18]">About me</h2>
                 <div className="flex flex-col md:flex-row items-center justify-center gap-10">
                     <p className="text-white-800 text-lg leading-relaxed text-justify">
                         I love to learn new things that challenge me. I believe that curiosity is the key to success in any field, and I strive to understand  as much as I can.<br/><br/>

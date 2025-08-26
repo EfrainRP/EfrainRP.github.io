@@ -20,7 +20,7 @@ export default function Layout({ children, className }) {
   // }, [lastScrollY]);
 
   return (
-    <div className="flex flex-col min-h-screen scheme-light-dark scroll-smooth">
+    <div className="flex flex-col min-h-screen scheme-light-dark scroll-smooth overflow-hidden">
       {/* Header */}
       <Header/>
 
@@ -29,14 +29,15 @@ export default function Layout({ children, className }) {
       </main>
       
 
-      <footer className="bg-gray-800 text-white p-4 text-center relative overflow-hidden animate-fade-in">
-        <p>Made by Efrain Robles.🦕</p>
-        <p>Made with 🧠 & 🔨 in React & Tailwind.</p>
-
-        <img className='hidden md:block w-15 absolute bottom-5 top-3 rounded-full' 
+      <footer className="bg-gray-800 text-white p-4 text-center relative overflow-hidden animate-fade-in group">
+        <div className='transition-all duration-400 ease-in-out group-hover:scale-[1.06]'>
+          <p>Made by Efrain Robles.🦕</p>
+          <p>Made with 🧠 & 🔨 in React & Tailwind.</p>
+        </div>
+        <img className='hidden md:block w-15 absolute bottom-5 top-3 rounded-full transition-all duration-400 ease-in-out group-hover:scale-[1.15]'
           alt='Stegosaur walks'
           src='walkStego.gif'/>
-        <img className='hidden md:block w-15 absolute bottom-5 top-3 right-5 rounded-2xl' 
+        <img className='hidden md:block w-15 absolute bottom-5 top-3 right-5 rounded-2xl transition-all duration-400 ease-in-out group-hover:scale-[1.15]'
           alt='Velociraptor runs'
           src='runVelo.gif'/>
         
